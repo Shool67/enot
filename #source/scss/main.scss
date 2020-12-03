@@ -26,11 +26,12 @@
   body{
     background: url("img/background.png");
   }
-
+// Положение слайдера
   .slider {
   margin-top: -20px;
   height: 60vh;
 }
+// Адоптация слайдера
   @media(max-width:$md2+px){
     .slider {
     margin-top: -300px;
@@ -41,22 +42,21 @@
     height: 30vh;
     }
   }
-
+// Отключение всех ненуужных частей слайдера
 .slider-item {
   display: none;
 }
-.slider-item:nth-child(2){
-  display: block;
-}
+// Размер картинки слайдера
 .slider-item__img {
   height: 60vh;
 }
+// Адоптация картинки слайдера
 @media(max-width:$md3+px){
   .slider-item__img {
     height: 30vh;
   }
 }
-
+// Редактирование кнопки для слайдера
 .slider-item__link {
   position: absolute;
   margin-top: -100px;
@@ -67,6 +67,12 @@
   padding: 10px;
   border-radius: 5px;
 }
+// Стилизация кнопки для слайдера при наведении
+.slider-item__link:hover {
+  color: black;
+  background-color: #fff;
+}
+// Адоптация кнопки для слайдера
 @media(max-width:$md3+px){
   .slider-item__link {
     font-size: 35px;
@@ -75,6 +81,7 @@
 .hide{
   display: none;
 }
+// Коробочка для стрелочек
 .prev-next-box {
   width: 100%;
   @include flexbox;
@@ -85,36 +92,37 @@
   margin-top: -30vh;
   font-weight: bold;
 }
-
+// Стилизация левой стрелочки
 .prev {
   margin-left: 20px;
   @include anim(0.3s,0s);
 }
-
+// Стилизация правой стрелочки
 .next {
   margin-right: 20px;
   @include anim(0.3s,0s);
 }
+// Стилизация стрелок при наведении
 .prev:hover,.next:hover{
   background-color: #ccc;
   color: #000;
   cursor: pointer;
   border-radius: 5px;
 }
-
+// Коробочка для точек слайдера
 .dot-box {
   @include flexbox;
   width: 100%;
   justify-content: center;
   margin-top: 160px;
 }
-
+// Адаптация контейнера точек: прячеться при размере экрана меньше 800px
 @media(max-width:800px){
 .dot-box {
     display: none;
   }
 }
-
+// Адаптация внешнего вида точки
 .dot {
   height: 20px;
   width: 20px;
@@ -122,17 +130,13 @@
   border-radius: 50%;
   margin-left: 5px;
 }
+// Адаптация внешнего вида точки при наведении
 .dot:hover{
   background-color: #5C5C5F;
 }
+// Стилизация активной точки
 .dot_active{
   background-color: #242424;
-}
-
-
-.slider-item__link:hover {
-  color: black;
-  background-color: #fff;
 }
 
 .news-container{
