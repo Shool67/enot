@@ -1,0 +1,57 @@
+/* прячем input checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* стили для метки */
+label {
+  color: #000;
+  cursor: pointer;
+  font-weight: normal;// Размер шрифта для тега label
+  line-height: 30px;
+  padding: 10px 0;
+  vertical-align: middle;
+}
+
+/* формируем внешний вид чекбокса в псевдоэлементе before */
+label:before {
+  content: " ";
+  // Цвет значка label
+  color: #000;
+  display: inline-block;
+  font: 20px/30px Arial;
+  margin-right: 5px;
+  position: relative;
+  text-align: center;
+  text-indent: 0px;
+  // Размеры label
+  width: 26px;
+  height: 25px;
+  // Цвет фона label
+  background: #FFF;
+  // цвет границ label
+  border: 1px solid #e3e3e3;
+  border-image: initial;
+  vertical-align: middle;
+}
+
+/* вариации внешнего вида в зав-ти от статуса checkbox */
+/* checked */
+input:checked + label:before {
+  // Значек для отмеченного label
+  content: "🗸";
+  // Коректировка значка
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 3px;
+  padding-top: 5px;
+}
+/* disabled */
+input:disabled + label:before {
+  content:" ";
+  background: #eee;
+  color: #aaa;
+}
