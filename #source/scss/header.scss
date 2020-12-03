@@ -1,9 +1,6 @@
 // ------------------------------------------------------------------
 header{height: 120px;}
 // ------------------------------------------------------------------
-.header-bottom-link{
-  display: inline-block;
-}
 .header-top {
   @include flexbox;
   background-color: #193385;
@@ -50,6 +47,9 @@ header{height: 120px;}
   display: none;
 }
 
+.header-bottom-link{
+  display: inline-block;
+}
 
 @media(max-width: $md2+px){
   .container{
