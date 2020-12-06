@@ -26,6 +26,14 @@
   body{
     background: url("../img/background.png");
   }
+  .wrapper{
+    width: auto;
+  }
+  @media (max-width:767px) {
+    .wrapper{
+      width: auto;
+    }
+  }
 // Положение слайдера
   .slider {
   margin-top: -20px;
@@ -49,11 +57,14 @@
 // Размер картинки слайдера
 .slider-item__img {
   height: 60vh;
+  width: 90vw;
 }
 // Адоптация картинки слайдера
-@media(max-width:$md3+px){
+@media(max-width:$md2+px){
   .slider-item__img {
-    height: 30vh;
+    height: 90vh;
+    overflow: hidden;
+    width: 100%;
   }
 }
 // Редактирование кнопки для слайдера
@@ -92,6 +103,12 @@
   margin-top: -30vh;
   font-weight: bold;
 }
+
+@media(max-width:992px){
+  .prev-next-box {
+  margin-top: -45vh;
+  }
+}
 // Стилизация левой стрелочки
 .prev {
   margin-left: 20px;
@@ -117,7 +134,7 @@
   margin-top: 160px;
 }
 // Адаптация контейнера точек: прячеться при размере экрана меньше 800px
-@media(max-width:800px){
+@media(max-width:992px){
 .dot-box {
     display: none;
   }
@@ -141,6 +158,16 @@
 
 .news-container{
   background-color: #fff;
+}
+@media(max-width:$md2+px){
+  .news-container{
+    margin-top: 30vh;
+  }
+}
+@media (max-width:767px) {
+  .news-container{
+    margin-top: 60vh;
+  }
 }
 .news-container img {
   width: 310px;
@@ -171,8 +198,6 @@
 .news-container p:not([class]) {
   text-indent: 1.5em;
 }
-
-@media(max-width:$md2+px){
   .news-container img {
     width: 410px;
     max-width: 600%;
@@ -206,7 +231,6 @@
   .news-container p:not([class]) {
     text-indent: 1.5em;
   }
-}
 .partners{
   background-color: #fff;
 }
@@ -219,4 +243,5 @@
   width: 150px;
   margin: 50px 85px;
 }
+// margin-top: 30vh;
 // --------------------------------------------

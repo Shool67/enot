@@ -9,6 +9,7 @@ header{height: 120px;}
 .header-top__img {
   margin-top: 1px;
   margin-left: 10px;
+  z-index: 900;
 }
 .header-top__img:hover{
   animation: enot 5s ease infinite;
@@ -52,14 +53,23 @@ header{height: 120px;}
 }
 
 @media(max-width: $md2+px){
+  .wrapper{
+    width: 100%;
+  }
+  .lock{
+    overflow: hidden;
+  }
   .container{
-    max-width: 100%;
+    max-width: 120%;
   }
   header{height: 400px;}
   .header-top {
+    max-width: 150%;
+    position: fixed;
     height: 100px;
     @include flexbox;
     background-color: #193385;
+    z-index: 800;
   }
 
   .header-top__img {
@@ -83,10 +93,10 @@ header{height: 120px;}
     height: 30px;
     width: 50px;
     margin-top: 30px;
-    margin-left: 40px;
+    margin-left: 60px;
     margin-right: 40px;
     display: block;
-    z-index: 50;
+    z-index: 900;
   }
   .header__burger:before{
     content:'';
@@ -120,12 +130,11 @@ header{height: 120px;}
 
   .header__burger_active{
     display: block;
-    position: relative;
+    position: fixed;
     height: 100px;
     width: 100px;
-    margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 40px;
+    top: 0;
+    right: 0;
     display: block;
     z-index: 50;
   }
@@ -161,19 +170,21 @@ header{height: 120px;}
 
   .header-bottom {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     margin-top: -120vh;
     @include anim(0.3s,0s);
+    z-index: 0;
   }
   .header-bottom_active{
-    margin-top: -100px;
+    margin-top: 0;
+    position: fixed;
   }
   .header-top__img_active {
     margin-top: 18px;
     margin-left: 50vw;
-    position: absolute;
+    position: fixed;
     z-index: 50;
     height: 100px;
     width: 100px;
@@ -200,9 +211,11 @@ header{height: 120px;}
   .container{
     max-width: 100%;
   }
-  header{height: 500px;}
+  header{height: 400px;}
+  // header{height: 200px;}
   .header-top {
-    height: 300px;
+    height: 100px;
+    width: 100vh;
     @include flexbox;
     background-color: #193385;
   }
@@ -312,7 +325,7 @@ header{height: 120px;}
     width: 100vw;
     height: 100vh;
     flex-direction: column;
-    margin-top: -120vh;
+    margin-top: -180vh;
     transition: all 0.3s ease;
   }
   .header-bottom_active{
