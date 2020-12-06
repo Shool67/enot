@@ -29,9 +29,9 @@ header{height: 120px;}
   margin-top: 20px;
   margin-left: 60px;
 }
-.header-top__small-txt{
-  display: none;
-}
+// .header-top__small-txt{
+//   display: none;
+// }
 
 .header-bottom {
   @include flexbox;
@@ -219,6 +219,12 @@ header{height: 120px;}
     width: 100vh;
     @include flexbox;
     background-color: #193385;
+    z-index: 50;
+  }
+  @media(max-width:$md3+px){
+    .header-top_active {
+      background-color: #fff;
+    }
   }
 
   .header-top__img {
@@ -230,15 +236,20 @@ header{height: 120px;}
   }
 
   .header-top__txt {
-    display: none;
+    width: 400px;
   }
-  .header-top__small-txt{
-    display: block;
-    font-size: 20px;
-    color: #fff;
-    margin-top: 35px;
-    margin-left: 50px;
+  @media (max-width: 673px) {
+    .header-top__txt {
+      display: none;
+    }
   }
+  // .header-top__small-txt{
+  //   display: block;
+  //   font-size: 20px;
+  //   color: #fff;
+  //   margin-top: 35px;
+  //   margin-left: 50px;
+  // }
 
   .header__burger{
     display: block;
