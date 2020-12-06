@@ -8,7 +8,7 @@
     max-width: $mw+px;margin: 0 auto;width: 100%;
     @media(max-width: $md1+px){max-width: 970px;}
     @media(max-width: $md2+px){max-width: 767px;}
-    @media(max-width: $md3+px){max-width: none; padding: 0 10px;}
+    @media(max-width: $md3+px){width: 100%;}
   }
 // --------------------------------------------
 
@@ -59,6 +59,22 @@
   height: 60vh;
   width: 90vw;
 }
+// Анимация переключения слайдов
+.fade{
+  -webkit-animation:fade 0.2s ;
+  -moz-animation:fade 0.2s ;
+  -ms-animation:fade 0.2s ;
+  -o-animation:fade 0.2s ;
+  animation:fade 0.2s ;
+}
+@-webkit-keyframes fade {
+    from{filter:brightness(40%);}
+    to{filter:brightness(100%);}
+}
+@keyframes fade {
+    from{filter:brightness(40%);}
+    to{filter:brightness(100%);}
+}
 // Адоптация картинки слайдера
 @media(max-width:$md2+px){
   .slider-item__img {
@@ -77,11 +93,17 @@
   background-color: #193385;
   padding: 10px;
   border-radius: 5px;
+  -webkit-transition:0.1s ease;
+  -moz-transition:0.1s ease;
+  -o-transition:0.1s ease;
+  transition:0.1s ease;
 }
 // Стилизация кнопки для слайдера при наведении
 .slider-item__link:hover {
   color: black;
   background-color: #fff;
+  font-size: 30px;
+  box-shadow: 3px 5px rgba(0,0,0,0.7);
 }
 // Адоптация кнопки для слайдера
 @media(max-width:$md3+px){
@@ -122,6 +144,8 @@
 // Стилизация стрелок при наведении
 .prev:hover,.next:hover{
   background-color: #ccc;
+  padding: 10px;
+  margin-top: -10px;
   color: #000;
   cursor: pointer;
   border-radius: 5px;
@@ -146,10 +170,16 @@
   background-color: #ccc;
   border-radius: 50%;
   margin-left: 5px;
+  -webkit-transition:0.1s ease;
+  -moz-transition:0.1s ease;
+  -o-transition:0.1s ease;
+  transition:0.1s ease;
 }
 // Адаптация внешнего вида точки при наведении
 .dot:hover{
   background-color: #5C5C5F;
+  height: 25px;
+  width: 25px;
 }
 // Стилизация активной точки
 .dot_active{

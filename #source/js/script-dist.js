@@ -5,6 +5,7 @@ function burger() {
   document.getElementsByTagName("body")[0].classList.toggle("lock");
   document.getElementsByClassName('top-button')[0].classList.toggle("hide");
   document.getElementsByClassName('header-top__txt')[0].classList.toggle("hide");
+  document.getElementsByClassName('header-top')[0].classList.toggle("header-top_active");
   var slideLink = document.getElementsByClassName('slider-item__link');
   for (var i = 0; i < slideLink.length; i++) {
     slideLink[i].classList.toggle("hide");
