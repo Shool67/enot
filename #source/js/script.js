@@ -3,6 +3,7 @@ function burger() {
   document.getElementsByClassName('header-bottom')[0].classList.toggle("header-bottom_active");
   document.getElementsByClassName('header-top__img')[0].classList.toggle("header-top__img_active");
   document.getElementsByTagName("body")[0].classList.toggle("lock");
+  document.getElementsByClassName('top-button')[0].classList.toggle("hide");
   document.getElementsByClassName('header-top__txt')[0].classList.toggle("hide");
   var slideLink = document.getElementsByClassName('slider-item__link');
   for (var i = 0; i < slideLink.length; i++) {
