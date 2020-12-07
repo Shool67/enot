@@ -37,15 +37,65 @@ header{height: 120px;}
 
 .header-bottom {
   @include flexbox;
-  padding: 10px 0;
+  // padding: 10px 0;
   background-color: #fff;
 }
 
-.header-bottom__item {
-  display: block;
-  margin-left: 20px;
+// Здесь будет header_menu
+.menu li{
+  // margin: auto 0;
+  position: relative;
+}
+.menu__list{
+  @include flexbox;
+  height: 40px;
+  padding: 1vh 0;
+}
+.menu__list>li{
+  margin-right: 30px;
+}
+.menu__list>li:nth-child(1){
+  margin-left: 10px;
+}
+
+.menu__list li:hover{
+  // border-right: 1px solid black;
+  // border-left: 1px solid black;
+  background-color: #ccc;
+}
+
+.menu__link{
   color: #000;
 }
+
+.menu__list>li:hover .sub-menu__list{
+  display: block;
+
+}
+
+.sub-menu__list{
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  min-width: 150px;
+  min-height: 150px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+.sub-menu__list>li{
+  padding: 10px;
+}
+.sub-menu__link{
+  color: #000;
+  text-align: center;
+  height: 10px;
+  width: 100%;
+}
+// Здесь будет header_menu
+
+
 .header__burger{
   display: none;
 }
