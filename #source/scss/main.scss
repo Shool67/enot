@@ -79,6 +79,8 @@
 @media(max-width:$md2+px){
   .slider-item__img {
     height: 90vh;
+    object-fit: cover;
+    background-size: cover;
     overflow: hidden;
     width: 100%;
   }

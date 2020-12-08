@@ -13,6 +13,7 @@ header{height: 120px;}
   margin-left: 10px;
   z-index: 900;
 }
+
 .header-top__img:hover{
   animation: enot 5s ease infinite;
 }
@@ -31,9 +32,6 @@ header{height: 120px;}
   margin-top: 20px;
   margin-left: 60px;
 }
-// .header-top__small-txt{
-//   display: none;
-// }
 
 .header-bottom {
   @include flexbox;
@@ -43,7 +41,6 @@ header{height: 120px;}
 
 // Здесь будет header_menu
 .menu li{
-  // margin: auto 0;
   position: relative;
 }
 .menu__list{
@@ -100,10 +97,6 @@ header{height: 120px;}
   display: none;
 }
 
-.header-bottom-link{
-  display: inline-block;
-}
-
 @media(max-width: $md2+px){
   .wrapper{
     width: 100%;
@@ -115,6 +108,7 @@ header{height: 120px;}
     max-width: 120%;
   }
   header{height: 400px;}
+
   .header-top {
     width:100%;
     position: fixed;
@@ -133,6 +127,7 @@ header{height: 120px;}
   }
 
   .header-top__txt {
+    width: 600px;
     font-size: 20px;
     color: #fff;
     margin-top: 35px;
@@ -141,14 +136,14 @@ header{height: 120px;}
 
   .header__burger{
     display: block;
-    position: relative;
+    position: fixed;
     height: 30px;
     width: 50px;
-    margin-top: 30px;
-    margin-left: 60px;
-    margin-right: 40px;
+    top: 30px;
+    right: 20px;
     display: block;
-    z-index: 900;
+    z-index: 50;
+
   }
   .header__burger:before{
     content:'';
@@ -179,78 +174,33 @@ header{height: 120px;}
     background-color: #fff;
     @include anim(0.3s,0s);
   }
-// // Прикольная анимация для бургера
-// .header__burger:hover:before{
-//   content:'';
-//   width: 90%;
-//   background-color: #D0D0D0;
-// }
-// .header__burger:hover:after{
-//   content:'';
-//   width: 60%;
-//   background-color: #D0D0D0;
-// }
-//
-// .header__burger:hover span{
-//   width: 70%;
-//   background-color: #D0D0D0;
-// }
-// // Чинилкинс
-// .header__burger_active:before,{
-//   content:'';
-//   width: 100%;
-//   height: 12px;
-//   position: absolute;
-//   top: 40px;
-//   background-color: #000;
-//   @include rotate(45deg);
-// }
-// .header__burger_active:after{
-//   content:'';
-//   width: 100%;
-//   height: 12px;
-//   position: absolute;
-//   bottom: 50px;
-//   background-color: #000;
-//   @include rotate(-45deg);
-// }
-//
-// .header__burger_active span{
-//   width: 100%;
-//   height: 10px;
-//   position: absolute;
-//   top: 12.1px;
-//   left: 0;
-//   background-color: #000;
-//   @include scale(0);
-// }
-// // Прикольная анимация для бургера
+// Активная фаза бургера
   .header__burger_active{
     display: block;
     position: fixed;
-    height: 100px;
-    width: 100px;
-    top: 0;
-    right: 0;
+    height: 60px;
+    width: 60px;
+    top: 25px;
+    right: 20px;
     display: block;
     z-index: 50;
   }
   .header__burger_active:before{
     content:'';
     width: 100%;
-    height: 12px;
+    height: 5px;
     position: absolute;
-    top: 40px;
-    background-color: #000;
+    top: 20px;
+    background-color: #FFF;
     @include rotate(45deg);
   }
   .header__burger_active:after{
     content:'';
     width: 100%;
-    height: 12px;
+    height: 5px;
     position: absolute;
-    bottom: 50px;
-    background-color: #000;
+    bottom: 35px;
+    background-color: #fff;
     @include rotate(-45deg);
   }
 
@@ -281,31 +231,56 @@ header{height: 120px;}
     margin-top: 0;
     position: fixed;
   }
-  .header-top__img_active {
-    margin-top: 18px;
-    margin-left: 50vw;
-    position: fixed;
-    z-index: 50;
-    height: 100px;
-    width: 100px;
+
+  // Стили выпадающего окна для меню менбше 920
+  .menu__list{
+    margin-top: 150px;
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
   }
-  .header-bottom-link{
-    display: block;
-    margin-left: 5vw;
-    margin-top: 100px;
-  }
-  .header-bottom-link:nth-child(1){
-    margin-top: 300px;
+  .menu__list>li{
+    margin-top: 70px;
+    font-size: 60px;
   }
 
-  .header-bottom__item {
-    text-align: center;
-    font-size: 60px;
-    margin-left: 40vw;
-    display: block;
-    margin-left: 20px;
+  .menu__list li:hover{
+    background-color: #ccc;
+  }
+
+  .menu__link{
     color: #000;
   }
+
+  .menu__list>li:focus .sub-menu__list{
+    display: block;
+
+  }
+
+  .sub-menu__list{
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    min-width: 150px;
+    min-height: 150px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    z-index: 600;
+  }
+  
+  .sub-menu__list>li{
+    padding: 10px;
+  }
+  .sub-menu__link{
+    color: #000;
+    text-align: center;
+    height: 10px;
+    width: 100%;
+  }
+  // Здесь будет header_menu
+
 }
 @media(max-width: $md3+px){
   .container{
@@ -320,11 +295,6 @@ header{height: 120px;}
     background-color: #193385;
     z-index: 50;
   }
-  // @media(max-width:$md3+px){
-  //   .header-top_active {
-  //     background-color: #fff;
-  //   }
-  // }
 
   .header-top__img {
     margin-top: 18px;
@@ -342,23 +312,16 @@ header{height: 120px;}
       display: none;
     }
   }
-  // .header-top__small-txt{
-  //   display: block;
-  //   font-size: 20px;
-  //   color: #fff;
-  //   margin-top: 35px;
-  //   margin-left: 50px;
-  // }
-
   .header__burger{
     display: block;
     position: fixed;
     height: 30px;
     width: 50px;
-    top: 0;
-    right: 0;
+    top: 30px;
+    right: 20px;
     display: block;
     z-index: 50;
+
   }
   .header__burger:before{
     content:'';
@@ -368,6 +331,7 @@ header{height: 120px;}
     top: 0;
     background-color: #fff;
     transition: all 0.3s ease;
+    @include anim(0.3s,0s);
   }
   .header__burger:after{
     content:'';
@@ -376,7 +340,7 @@ header{height: 120px;}
     position: absolute;
     bottom: 0;
     background-color: #fff;
-    transition: all 0.3s ease;
+    @include anim(0.3s,0s);
   }
 
   .header__burger span{
@@ -386,35 +350,35 @@ header{height: 120px;}
     top: 12.1px;
     left: 0;
     background-color: #fff;
-    transition: all 0.3s ease;
+    @include anim(0.3s,0s);
   }
-
+// Активная фаза бургера
   .header__burger_active{
     display: block;
     position: fixed;
-    height: 100px;
-    width: 100px;
-    top: 0;
-    right: 0;
+    height: 60px;
+    width: 60px;
+    top: 25px;
+    right: 20px;
     display: block;
-    z-index: 900;
+    z-index: 50;
   }
   .header__burger_active:before{
     content:'';
     width: 100%;
-    height: 12px;
+    height: 5px;
     position: absolute;
-    top: 40px;
-    background-color: #000;
+    top: 20px;
+    background-color: #FFF;
     @include rotate(45deg);
   }
   .header__burger_active:after{
     content:'';
     width: 100%;
-    height: 12px;
+    height: 5px;
     position: absolute;
-    bottom: 50px;
-    background-color: #000;
+    bottom: 35px;
+    background-color: #fff;
     @include rotate(-45deg);
   }
 
@@ -428,82 +392,4 @@ header{height: 120px;}
     @include scale(0);
   }
 
-
-  .header-bottom {
-    display:none;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    margin-top:-800vh;
-    flex-direction: column;
-    // margin-top: -180vh;
-    transition: all 0.3s ease;
-  }
-  .header-bottom_active{
-    display:block;
-    margin-top: 10vh;
-  }
-  .header-top__img_active {
-    margin-top: 18px;
-    margin-left: 50vw;
-    position: absolute;
-    z-index: 50;
-    height: 100px;
-    width: 100px;
-  }
-  .header-bottom-link{
-    display: block;
-    margin-left: 5vw;
-    margin-top: 60px;
-  }
-  .header-bottom-link:nth-child(1){
-    margin-top: 150px;
-  }
-
-  .header-bottom__item {
-    text-align: center;
-    font-size: 60px;
-    margin-left: 40vw;
-    display: block;
-    margin-left: 20px;
-    color: #000;
-  }
 }
-
-
-
-
-
-
-
-
-
-
-
-// .header-menu__icon{
-//   display: block;
-//   position: absolute;
-//   top: 18px;
-//   right: 10px;
-//   width: 30px;
-//   height: 18px;
-//   cursor: pointer;
-//   z-index: 5;
-//   span{
-//   @include anim(0.3s,0s);
-//   top: 8px;
-//   left: 0;
-//   position: absolute;
-//   width: 100%;
-//   height: 2px;
-//   background-color: #000;
-//     &:first-child{top: 0px;}
-//     &:last-child{top: auto; bottom: 0px;}
-//   }
-//   &.active{
-//     span{@include scale(0);
-//       &:first-child{@include rotate(-45deg);top: 8px;}
-//       &:last-child{@include rotate(45deg);top: 8px;}
-//     }
-//   }
-// }
