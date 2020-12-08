@@ -1,10 +1,14 @@
 .footer-body{
   background-color: #193385;
 }
-footer p {
-  text-align: center;
-  padding: 10px 0;
-  color: #fff;
+.footer-nav{
+  display:inline-block;
+  margin:0 135px;
+}
+.footer-nav__item{
+  color:white;
+  display: block;
+  margin-top: 10px;
 }
 .top-button {
   width: 100px;
