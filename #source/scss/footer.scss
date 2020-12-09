@@ -2,14 +2,16 @@
   background-color: #193385;
 }
 .footer-nav{
-  display:inline-block;
-  margin:0 135px;
+  @include flexbox;
+  width: 100%;
+  justify-content: space-around;
 }
 .footer-nav__item{
   color:white;
   display: block;
   margin-top: 10px;
 }
+
 .top-button {
   width: 100px;
   text-decoration: none;
