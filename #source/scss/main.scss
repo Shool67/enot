@@ -266,6 +266,7 @@
   }
 .partners{
   background-color: #fff;
+  @include flexbox;
 }
 .partners h2{
   text-align: center;
