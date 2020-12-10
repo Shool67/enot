@@ -51,17 +51,17 @@
     }
   }
 // Отключение всех ненуужных частей слайдера
-.slider-item {
+.slider__item {
   display: none;
 }
 // Размер картинки слайдера
-.slider-item__img {
+.slider__item-img {
   height: 60vh;
   width: 90vw;
   object-fit: cover;
 }
 // Анимация переключения слайдов
-.fade{
+.slider_fade{
   -webkit-animation:fade 0.2s ;
   -moz-animation:fade 0.2s ;
   -ms-animation:fade 0.2s ;
@@ -78,7 +78,7 @@
 }
 // Адоптация картинки слайдера
 @media(max-width:$md2+px){
-  .slider-item__img {
+  .slider__item-img {
     height: 90vh;
     object-fit: cover;
     background-size: cover;
@@ -87,7 +87,7 @@
   }
 }
 // Редактирование кнопки для слайдера
-.slider-item__link {
+.slider__item-link {
   position: absolute;
   margin-top: -100px;
   margin-left: 20px;
@@ -102,7 +102,7 @@
   transition:0.1s ease;
 }
 // Стилизация кнопки для слайдера при наведении
-.slider-item__link:hover {
+.slider__item-link:hover {
   color: black;
   background-color: #fff;
   font-size: 30px;
@@ -110,7 +110,7 @@
 }
 // Адоптация кнопки для слайдера
 @media(max-width:$md3+px){
-  .slider-item__link {
+  slider__item-link {
     font-size: 35px;
   }
 }
@@ -118,7 +118,7 @@
   display: none;
 }
 // Коробочка для стрелочек
-.prev-next-box {
+.nav-arrows {
   width: 100%;
   @include flexbox;
   justify-content: space-between;
@@ -130,22 +130,22 @@
 }
 
 @media(max-width:992px){
-  .prev-next-box {
+  .nav-arrows {
   margin-top: -45vh;
   }
 }
 // Стилизация левой стрелочки
-.prev {
+.nav-arrows__prev {
   margin-left: 20px;
   @include anim(0.3s,0s);
 }
 // Стилизация правой стрелочки
-.next {
+.nav-arrows__next {
   margin-right: 20px;
   @include anim(0.3s,0s);
 }
 // Стилизация стрелок при наведении
-.prev:hover,.next:hover{
+.nav-arrows__prev:hover,.nav-arrows__next:hover{
   background-color: #ccc;
   padding: 10px;
   margin-top: -10px;
@@ -153,126 +153,101 @@
   cursor: pointer;
   border-radius: 5px;
 }
-// Коробочка для точек слайдера
-.dot-box {
-  @include flexbox;
-  width: 100%;
-  justify-content: center;
-  margin-top: 90px;
-}
-// Адаптация контейнера точек: прячеться при размере экрана меньше 800px
-@media(max-width:992px){
-.dot-box {
-    display: none;
-  }
-}
-// Адаптация внешнего вида точки
-.dot {
-  height: 20px;
-  width: 20px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin-left: 5px;
-  -webkit-transition:0.1s ease;
-  -moz-transition:0.1s ease;
-  -o-transition:0.1s ease;
-  transition:0.1s ease;
-}
-// Адаптация внешнего вида точки при наведении
-.dot:hover{
-  background-color: #5C5C5F;
-  height: 25px;
-  width: 25px;
-}
-// Стилизация активной точки
-.dot_active{
-  background-color: #242424;
-}
+// // Коробочка для точек слайдера
+// .dot-box {
+//   @include flexbox;
+//   width: 100%;
+//   justify-content: center;
+//   margin-top: 90px;
+// }
+// // Адаптация контейнера точек: прячеться при размере экрана меньше 800px
+// @media(max-width:992px){
+// .dot-box {
+//     display: none;
+//   }
+// }
+// // Адаптация внешнего вида точки
+// .dot {
+//   height: 20px;
+//   width: 20px;
+//   background-color: #ccc;
+//   border-radius: 50%;
+//   margin-left: 5px;
+//   -webkit-transition:0.1s ease;
+//   -moz-transition:0.1s ease;
+//   -o-transition:0.1s ease;
+//   transition:0.1s ease;
+// }
+// // Адаптация внешнего вида точки при наведении
+// .dot:hover{
+//   background-color: #5C5C5F;
+//   height: 25px;
+//   width: 25px;
+// }
+// // Стилизация активной точки
+// .dot_active{
+//   background-color: #242424;
+// }
 
-.news-container{
+.news{
   background-color: #fff;
 }
 @media(max-width:$md2+px){
-  .news-container{
+  .news{
     margin-top: 30vh;
   }
 }
 @media (max-width:767px) {
-  .news-container{
+  .news{
     margin-top: 60vh;
   }
 }
-.news-container img {
-  width: 310px;
+
+.news__title{
+  text-align: center;
+  padding: 10px 0;
+}
+@media (max-width:920px) {
+  .news__title{
+    font-size: 40px;
+  }
 }
 
-.news-container section {
-  display: inline-block;
+
+.news__section {
+  @include flexboxline;
+  flex-direction: column;
+  align-items: center;
   width: 310px;
   margin: 0 0 0 10px;
   vertical-align: top;
   border: 1.5px dashed #ccc;
 }
 
-.news-container h2{
-  text-align: center;
-  padding: 10px 0;
+.news__img {
+  width: 100%;
+  object-fit: cover;
 }
 
-.news-date {
+
+.news__date {
   font-weight: bold;
 }
 
-.news-container p {
+.news__subtitle {
   padding: 10px;
   text-align: justify;
 }
 
-.news-container p:not([class]) {
-  text-indent: 1.5em;
-}
-  .news-container img {
-    width: 410px;
-    max-width: 600%;
-    margin: 0 auto;
-  }
-
-  .news-container section {
-    display: block;
-    width:100%;
-    margin: 0 auto;
-    vertical-align: top;
-    border: none;
-  }
-
-  .news-container h2{
-    font-size: 40px;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .news-date {
-    font-weight: bold;
-    margin-left: 45vw;
-  }
-
-  .news-container p {
-    padding: 10px;
-    text-align: justify;
-  }
-
-  .news-container p:not([class]) {
-    text-indent: 1.5em;
-  }
 .partners{
   background-color: #fff;
-  @include flexbox;
+  // @include flexbox;
 }
-.partners h2{
+.partners__title{
   text-align: center;
   padding: 10px 0;
 }
-.partners img {
+.partners__img {
   display: inline-block;
   width: 150px;
   margin: 50px 85px;

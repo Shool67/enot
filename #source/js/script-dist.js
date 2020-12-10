@@ -4,7 +4,7 @@ function burger() {
   document.getElementsByTagName("body")[0].classList.toggle("lock");
   document.getElementsByClassName('top-button')[0].classList.toggle("hide");
   document.getElementsByClassName('header-top')[0].classList.toggle("header-top_active");
-  var slideLink = document.getElementsByClassName('slider-item__link');
+  var slideLink = document.getElementsByClassName('slider__item-link');
   for (var i = 0; i < slideLink.length; i++) {
     slideLink[i].classList.toggle("hide");
   }
@@ -21,8 +21,8 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var slides = document.getElementsByClassName('slider-item');
-  var dots= document.getElementsByClassName('dot');
+  var slides = document.getElementsByClassName('slider__item');
+  // var dots= document.getElementsByClassName('dot');
 
   if (n> slides.length) {
     slideIndex = 1;
@@ -33,11 +33,11 @@ function showSlides(n) {
   for (var i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (var i = 0; i < dots.length; i++) {
-    dots[i].classList.remove("dot_active")
-  }
+  // for (var i = 0; i < dots.length; i++) {
+  //   dots[i].classList.remove("dot_active")
+  // }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].classList.add("dot_active");
+  // dots[slideIndex-1].classList.add("dot_active");
 }
 
 var $btnTop = $(".top-button")

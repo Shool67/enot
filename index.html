@@ -102,87 +102,81 @@
 <a href="https://www.google.ru/" class="header-bottom-link"><li class="header-bottom__item">Участникам</li></a>
 <a href="https://www.google.ru/" class="header-bottom-link"><li class="header-bottom__item">Новости</li></a>
 <a href="https://www.google.ru/" class="header-bottom-link"><li class="header-bottom__item">Контакты</li></a> -->
+    <div class="container">
       <div class="slider">
-        <div class="container">
-          <div class="slider-item fade">
-            <img src="img/slider/Slider_photo_1.jpg" style="width:100%;"alt="" class="slider-item__img">
-            <a href="doc/enot-conference.pdf" class="slider-item__link">Положение о конференции</a>
+          <div class="slider__item slider_fade">
+            <img src="img/slider/Slider_photo_1.jpg" style="width:100%;"alt="" class="slider__item-img">
+            <a href="doc/enot-conference.pdf" class="slider__item-link">Положение о конференции</a>
           </div>
-          <div class="slider-item fade">
-            <img src="img/slider/Slider_photo_2.jpg" style="width:100%;" class="slider-item__img">
-            <a href="https://rs.baltkonkurs.ru/" class="slider-item__link">Регистрация участников</a>
+          <div class="slider__item slider_fade">
+            <img src="img/slider/Slider_photo_2.jpg" style="width:100%;" class="slider__item-img">
+            <a href="https://rs.baltkonkurs.ru/" class="slider__item-link">Регистрация участников</a>
           </div>
-          <div class="slider-item fade">
-            <img src="img/slider/Slider_photo_1.jpg" style="width:100%;" class="slider-item__img">
-            <a href="http://school67vrn.ru/" class="slider-item__link">Сайт организатора</a>
+          <div class="slider__item slider_fade">
+            <img src="img/slider/Slider_photo_1.jpg" style="width:100%;" class="slider__item-img">
+            <a href="http://school67vrn.ru/" class="slider__item-link">Сайт организатора</a>
           </div>
-          <div class="prev-next-box">
-          <div class="prev" onclick="plusSlides(-1)">&#10094</div>
-          <div class="next" onclick="plusSlides(1)">&#10095</div>
+          <div class="nav-arrows">
+          <div class="nav-arrows__prev" onclick="plusSlides(-1)">&#10094</div>
+          <div class="nav-arrows__next" onclick="plusSlides(1)">&#10095</div>
           </div>
-          <div class="dot-box">
+          <!-- <div class="dot-box">
             <div class="dot dot_active" onclick="currentSlide(1)"></div>
             <div class="dot" onclick="currentSlide(2)"></div>
             <div class="dot" onclick="currentSlide(3)"></div>
             <div class=" dot_active"></div>
-          </div>
+          </div> -->
         </div>
-      </div>
-      <div class="container">
-      <article class="news-container">
-			<h2>Последние новости</h2>
-			<section>
-				<img src="img/news/left.png" alt="Новости">
-				<p class="news-date">01.10.2019</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <article class="news">
+			<h2 class="news__title">Последние новости</h2>
+			<section class="news__section">
+				<img src="img/news/left.png" alt="Новости" class="news__img">
+				<p class="news__date">01.10.2019</p>
+				<p class="news__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</section>
-			<section>
-				<img src="img/news/center.png" alt="Новости">
-				<p class="news-date">02.10.2019</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<section class="news__section">
+				<img src="img/news/center.png" alt="Новости" class="news__img">
+				<p class="news__date">02.10.2019</p>
+				<p class="news__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</section>
-			<section>
-				<img src="img/news/right.png" alt="Новости">
-				<p class="news-date">03.10.2019</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<section class="news__section">
+				<img src="img/news/right.png" alt="Новости" class="news__img">
+				<p class="news__date">03.10.2019</p>
+				<p class="news__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</section>
 		</article>
-    </div>
-    <div class="container">
     <div class="partners">
-        <h2>Наши партнеры</h2>
-        <a href="https://www.adidas.ru/" target="_blank"><img src="img/partners/1.png" alt="Adidas Logo" title="Adidas"></a>
-        <a href="https://www.nike.com/ru/" target="_blank"><img src="img/partners/2.png" alt="Nike Logo" title="Nike"></a>
-        <a href="https://ru.puma.com/" target="_blank"><img src="img/partners/3.png" alt="Puma Logo" title="Puma"></a>
-        <a href="https://newbalance.ru/" target="_blank"><img src="img/partners/4.png" alt="New Balance Logo" title="New Balance"></a>
-        <a href="https://www.reebok.ru/" target="_blank"><img src="img/partners/5.png" alt="Reebok Logo" title="Reebok"></a>
-        <a href="https://www.asics.com/ru/ru-ru/" target="_blank"><img src="img/partners/6.png" alt="Asics Logo" title="Asics"></a>
+        <h2 class="partners__title">Наши партнеры</h2>
+        <a href="https://www.adidas.ru/" target="_blank"><img src="img/partners/1.png" class="partners__img"></a>
+        <a href="https://www.nike.com/ru/" target="_blank"><img src="img/partners/2.png" class="partners__img"></a>
+        <a href="https://ru.puma.com/" target="_blank"><img src="img/partners/3.png" class="partners__img"></a>
+        <a href="https://newbalance.ru/" target="_blank"><img src="img/partners/4.png" class="partners__img"></a>
+        <a href="https://www.reebok.ru/" target="_blank"><img src="img/partners/5.png" class="partners__img"></a>
+        <a href="https://www.asics.com/ru/ru-ru/" target="_blank"><img src="img/partners/6.png" class="partners__img"></a>
       </div>
     </div>
-<footer>
-  <div class="container">
-    <div class="footer-body">
-      <div class="footer-nav">
-        <a href="#" class="footer-nav__item">привет</a>
-        <a href="#" class="footer-nav__item">привет</a>
-        <a href="#" class="footer-nav__item">привет</a>
+<div class="container">
+<footer class="footer">
+      <div class="footer__nav">
+        <a href="#" class="footer__nav-item">привет</a>
+        <a href="#" class="footer__nav-item">привет</a>
+        <a href="#" class="footer__nav-item">привет</a>
       </div>
-      <div class="footer-nav">
-        <a href="#" class="footer-nav__item">привет</a>
-        <a href="#" class="footer-nav__item">привет</a>
-        <a href="#" class="footer-nav__item">привет</a>
+      <div class="footer__nav">
+        <a href="#" class="footer__nav-item">привет</a>
+        <a href="#" class="footer__nav-item">привет</a>
+        <a href="#" class="footer__nav-item">привет</a>
       </div>
-      <div class="footer-nav">
-        <a href="#" class="footer-nav__item">привет</a>
-        <a href="#" class="footer-nav__item">привет</a>
-        <a href="#" class="footer-nav__item">привет</a>
+      <div class="footer__nav">
+        <a href="#" class="footer__nav-item">привет</a>
+        <a href="#" class="footer__nav-item">привет</a>
+        <a href="#" class="footer__nav-item">привет</a>
       </div>
       <a class="top-button" href="#">
         <img src="img/icons/top_button.png" alt="">
       </a>
-    </div>
-  </div>
 </footer>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
   </body>

@@ -249,6 +249,7 @@ header{height: 120px;}
   }
 
   .menu__link{
+
     color: #000;
   }
 
@@ -269,7 +270,7 @@ header{height: 120px;}
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
     z-index: 600;
   }
-  
+
   .sub-menu__list>li{
     padding: 10px;
   }
@@ -391,5 +392,55 @@ header{height: 120px;}
     background-color: #000;
     @include scale(0);
   }
+
+  // Стили выпадающего окна для меню менбше 920
+  .menu__list{
+    margin-top: 150px;
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu__list>li{
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 30px;
+  }
+
+  .menu__list li:hover{
+    background-color: #ccc;
+  }
+
+  .menu__link{
+    color: #000;
+  }
+
+  .menu__list>li:focus .sub-menu__list{
+    display: block;
+
+  }
+
+  .sub-menu__list{
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    min-width: 150px;
+    min-height: 150px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    z-index: 600;
+  }
+
+  .sub-menu__list>li{
+    padding: 10px;
+  }
+  .sub-menu__link{
+    color: #000;
+    text-align: center;
+    height: 10px;
+    width: 100%;
+  }
+  // Здесь будет header_menu
 
 }

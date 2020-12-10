@@ -1,12 +1,12 @@
-.footer-body{
+.footer{
   background-color: #193385;
 }
-.footer-nav{
+.footer__nav{
   @include flexbox;
   width: 100%;
   justify-content: space-around;
 }
-.footer-nav__item{
+.footer__nav-item{
   color:white;
   display: block;
   margin-top: 10px;

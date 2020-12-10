@@ -63,6 +63,15 @@ font-style: #{$style};
   -o-display: flex;
   display: flex;
 }
+@mixin flexboxline(){
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  -webkit-display: inline-flex;
+  -moz-display: inline-flex;
+  -ms-display: inline-flex;
+  -o-display: inline-flex;
+  display: inline-flex;
+}
 @mixin flexorder($val){
   -webkit-webkit-order:$val;
   -moz-webkit-order:$val;
