@@ -6,7 +6,7 @@ header{height: 120px;}
   background-color: #193385;
 }
 .header-top_active {
-  background-color: #fff;
+  // background-color: #fff;
 }
 .header-top__img {
   margin-top: 1px;
@@ -291,7 +291,7 @@ header{height: 120px;}
   // header{height: 200px;}
   .header-top {
     height: 100px;
-    width: 130vh;
+    width: 180vh;
     @include flexbox;
     background-color: #193385;
     z-index: 50;

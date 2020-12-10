@@ -1,3 +1,9 @@
+// window.onload= function functionName() {
+//   var last_child = document.getElementsByClassName('news__section');
+//   if (last_child.length%2 != 0) {
+//     last_child[last_child.length-1].classList.add("news_last_child_odd");
+//   }
+// }
 function burger() {
   document.getElementsByClassName('header__burger')[0].classList.toggle("header__burger_active");
   document.getElementsByClassName('header-bottom')[0].classList.toggle("header-bottom_active");
