@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-header{height: 120px;}
+header{height: 120px;font-family: 'Work Sans', sans-serif;}
 // ------------------------------------------------------------------
 .header-top {
   @include flexbox;
@@ -27,6 +27,7 @@ header{height: 120px;}
 }
 
 .header-top__txt {
+  // font-family: 'Work Sans', sans-serif;
   font-size: 20px;
   color: #fff;
   margin-top: 20px;
@@ -62,6 +63,7 @@ header{height: 120px;}
 }
 
 .menu__link{
+  // font-family: 'Work Sans', sans-serif;
   color: #000;
 }
 
@@ -85,6 +87,7 @@ header{height: 120px;}
   padding: 10px;
 }
 .sub-menu__link{
+  // font-family: 'Work Sans', sans-serif;
   color: #000;
   text-align: center;
   height: 10px;
