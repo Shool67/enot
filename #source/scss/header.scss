@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-header{height: 120px;font-family: 'Work Sans', sans-serif;}
+header{height: 120px;}
 // ------------------------------------------------------------------
 .header-top {
   @include flexbox;
@@ -130,7 +130,7 @@ header{height: 120px;font-family: 'Work Sans', sans-serif;}
   }
 
   .header-top__txt {
-    width: 600px;
+    width: 500px;
     font-size: 20px;
     color: #fff;
     margin-top: 35px;

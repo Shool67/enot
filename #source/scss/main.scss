@@ -25,6 +25,7 @@
 // Освновной блок
   body{
     background: url("../img/background.png");
+    font-family: 'Roboto Condensed', sans-serif;
   }
   .wrapper{
     width: auto;
@@ -88,7 +89,6 @@
 }
 // Редактирование кнопки для слайдера
 .slider__item-link {
-  font-family: 'Work Sans', sans-serif;
   position: absolute;
   margin-top: -100px;
   margin-left: 20px;
@@ -191,7 +191,6 @@
 // }
 
 .news{
-  font-family: 'Work Sans', sans-serif;
   background-color: #fff;
   // @include flexbox;
   // flex-direction: column;
@@ -267,7 +266,6 @@
 }
 
 .partners{
-  font-family: 'Work Sans', sans-serif;
   background-color: #fff;
 }
 .partners__title{
@@ -281,6 +279,12 @@
   margin: 15% 0 10% 15%;
   // margin: 15% 0 10% 20%;
 }
+@media(max-width:833px){
+  .partners__img {
+    margin: 15% 0 10% 20%;
+  }
+}
+
 @media(max-width:833px){
   .partners__img {
     margin: 15% 0 10% 20%;
