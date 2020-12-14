@@ -2,9 +2,9 @@
 @import 'fonts';
 @import 'mixin';
 @import 'var';
-//Уменьшить высоту хедера
-//Поправить шрифты где странно
-// сделать нормальную кнопку у слайдера
+//Уменьшить высоту хедера-o
+//Поправить шрифты где странно -o
+// сделать нормальную кнопку у слайдера-0
 // починить партнерт инфлай-блок
 // добавить футеру марджин боттом
 // закоментировать нижднии блоки меню
@@ -37,6 +37,10 @@
   .wrapper{
     width: auto;
   }
+  //супергениеальное решение для мобойлов
+  .header-bottom_for-mobile{
+
+  }
   @media (max-width:767px) {
     .wrapper{
       width: auto;
@@ -44,13 +48,13 @@
   }
 // Положение слайдера
   .slider {
-  margin-top: -20px;
+  margin-top: -30px;
   height: 60vh;
 }
 // Адоптация слайдера
   @media(max-width:$md2+px){
     .slider {
-    margin-top: -300px;
+    margin-top: -320px;
     }
   }
   @media(max-width:$md3+px){
@@ -113,7 +117,7 @@
 .slider__item-link:hover {
   color: black;
   background-color: #fff;
-  font-size: 30px;
+  font-size: 25px;
   box-shadow: 3px 5px rgba(0,0,0,0.7);
 }
 // Адоптация кнопки для слайдера
