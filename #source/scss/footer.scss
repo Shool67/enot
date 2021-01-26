@@ -27,3 +27,11 @@
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
 }
+
+@media (max-width: 500px) {
+  .top-button{
+    width: 80px;
+    right: 20px;
+    bottom: 10px;
+  }
+}

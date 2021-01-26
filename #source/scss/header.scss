@@ -35,11 +35,13 @@ header{height: 120px;}
 
 .header-bottom {
   @include flexbox;
-  // padding: 10px 0;
+  padding: 10px 10px;
   background-color: #fff;
 }
 
 // Здесь будет header_menu
+
+
 .menu li{
   position: relative;
 }
